@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Grading System | Mamun</title>
+  </head>
+  <body>
+    
+    <div class="container py-5">
+       <div class="row">
+           <div class="col-md-7 col-sm-12 text-white main">
+                <h4 class="text-center bg-dark text-white p-3">Give the marks in the input box</h4> <hr style="background: orange;">
+                <div class="row">
+                    <div class="col-md-6 label-cls ">
+                        
+                        <p class="text-center mt-3">English</p>   
+                        <p class="text-center mt-3" >Math</p>   
+                        <p class="text-center mt-3">Sociology</p>   
+                        <p class="text-center mt-3">Science</p>   
+                        <p class="text-center mt-3">ICT</p>   
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <input type="text" id="eng" class="form-control w-75 mb-2" required placeholder="Your English Marks">   
+                        <input type="text" id="math" class="form-control w-75 mb-2" required placeholder="Your Math Marks">   
+                        <input type="text" id="soc" class="form-control w-75 mb-2" required placeholder="Your Sociology Marks">   
+                        <input type="text" id="sci" class="form-control w-75 mb-2" required placeholder="Your Science Marks">   
+                        <input type="text" id="ict" class="form-control w-75 mb-2" required placeholder="Your ICT Marks"> 
+                    </div>
+                </div>
+                   <div class="py-4 text-center">
+                    <hr style="background: rgb(17, 185, 17);">
+                        <button id="totalBtn" type="submit" class="btn btn-success mr-md-5 p-1">Total</button>
+                        <button id="averageBtn" type="submit" class="btn btn-success mr-md-5 p-1">Average</button>
+                        <button id="gradeBtn" type="submit" class="btn btn-success p-1">Grade</button>
+                   </div>
+                   <hr style="background: rgb(17, 185, 17);">
+                <div class="d-none d-lg-block d-md-block d-xl-block">
+                    <p>Study More Get A Better Result</p>
+                    <p>Study Less Get A Worst Result</p>
+                    <p>Your Future Will Be Define By Your Study</p>
+                    <p>By Your Thinking Process You Will Be Good Person</p>
+                    <p>Don't Think What Other Say About You</p>
+                    <p>Just Do Whatever Your Mind Want</p>
+                </div>
+           </div>
+           <div class="col-md-5 col-sm-12 mt-sm-3">
+            <h3 class="text-center bg-success text-white ">Total <hr style="background: orange;"></h3>
+            <div id="total" class="mb-2">
+
+            </div>
+            <h3 class="text-center bg-secondary text-white">Average <hr style="background: orange;"></h3>
+            <div id="average" class="mb-2">
+
+            </div>
+            <h3 class="text-center bg-primary text-white">Grade <hr style="background: orange;"></h3>
+            <div id="grade" class="mb-2">
+
+            </div>
+           </div>
+       </div>
+       <div class="row text-center mt-2">
+           <div class="col-12 bg-dark text-white">
+               <h5 class="py-3">Design by <strong style="color: orange;">Mamun</strong></h5>
+           </div>
+       </div>
+       
+    </div>
+    
+    <script>
+
+
+        document.getElementById('totalBtn').addEventListener('click', function(){
+            var sub1 = parseInt(document.getElementById('eng').value);
+            var sub2 = parseInt(document.getElementById('math').value);
+            var sub3 = parseInt(document.getElementById('soc').value);
+            var sub4 = parseInt(document.getElementById('sci').value);
+            var sub5 = parseInt(document.getElementById('ict').value);
+
+            if(sub1>100 ||sub2>100 || sub3>100 || sub4>100 || sub5>100){
+                alert("please give the marks between 0 to 100");
+            }
+            
+            else{
+                var total = sub1+sub2+sub3+sub4+sub5 ;
+                document.getElementById('total').innerHTML = "English Marsk is : " + sub1 + "<br> Math Marks is : " + sub2 + "<br> Sociology Marks is : " + sub3 + "<br> Science Marks is : " + sub4 + "<br> ICT Marks is : " + sub5 + "<br> -------------------------- <br> Your Total Marks is : " + total + " " + "Out of 500 Marks";
+            }
+        
+        });
+
+        document.getElementById('averageBtn').addEventListener('click',  function(){
+            var sub1 = parseInt(document.getElementById('eng').value);
+            var sub2 = parseInt(document.getElementById('math').value);
+            var sub3 = parseInt(document.getElementById('soc').value);
+            var sub4 = parseInt(document.getElementById('sci').value);
+            var sub5 = parseInt(document.getElementById('ict').value);
+            if(sub1>100 ||sub2>100 || sub3>100 || sub4>100 || sub5>100){
+                alert("please give the marks between 0 to 100");
+            }
+            else{
+            var total = sub1+sub2+sub3+sub4+sub5 ;
+            var avg = total/5;
+           
+            document.getElementById('average').innerHTML = "Your Average Marks is :" + avg +"%";
+            }
+        });
+        
+        document.getElementById('gradeBtn').addEventListener('click', function(){
+            var sub1 = parseInt(document.getElementById('eng').value);
+            var sub2 = parseInt(document.getElementById('math').value);
+            var sub3 = parseInt(document.getElementById('soc').value);
+            var sub4 = parseInt(document.getElementById('sci').value);
+            var sub5 = parseInt(document.getElementById('ict').value);
+            if(sub1>100 ||sub2>100 || sub3>100 || sub4>100 || sub5>100){
+                alert("please give the marks between 0 to 100");
+            }
+            else {
+            var total = sub1+sub2+sub3+sub4+sub5 ;
+            var avg = total/5;
+            
+            if(avg>=80 && avg<=100){
+                document.getElementById('grade').innerHTML = "Your Grade is A+";
+            }
+            else if(avg>=75 && avg<=79){
+                document.getElementById('grade').innerHTML = "Your Grade is A";
+            }
+            else if(avg>=70 && avg<=74){
+                document.getElementById('grade').innerHTML = "Your Grade is A-";
+            }
+            else if(avg>=65 && avg<=69){
+                document.getElementById('grade').innerHTML = "Your Grade is B";
+            }
+            else if(avg>=60 && avg<=64){
+                document.getElementById('grade').innerHTML = "Your Grade is C";
+            }
+            else if(avg>=50 && avg<=59){
+                document.getElementById('grade').innerHTML = "Your Grade is D";
+            }
+            else{
+                document.getElementById('grade').innerHTML = "Your Grade is F";
+            }
+            }
+        });
+
+        
+
+    </script>
+
+  </body>
+</html>

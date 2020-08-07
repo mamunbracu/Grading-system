@@ -1,0 +1,36 @@
+body{
+    background: #9c9494;
+}
+.label-cls p{
+    font-size: 20px;
+}
+.main{
+    background: #04043cf7;
+}
+#total{
+    border: 1px solid green;
+    height: 270px;
+    width: 100%;
+    padding: 20px;
+    background: wheat;
+    font-size: 19px;
+    font-weight: 500;
+}
+#average{
+    border: 1px solid green;
+    height: 50px;
+    width: 100%;
+    background: wheat;
+    padding: 6px;
+    font-size: 19px;
+    font-weight: 500;
+}
+#grade{
+    border: 1px solid green;
+    height: 50px;
+    width: 100%;
+    background: wheat;
+    padding: 6px;
+    font-size: 19px;
+    font-weight: 500;
+}
